@@ -66,6 +66,10 @@ allow hal_face_default hal_face_debug_service:service_manager add;
 # Allow hal_face_default to open files in sysfs
 allow hal_face_default sysfs:file { open read getattr write };
 
+# Allow hal_face_default to search dir and open, read, write file in sysfs vendor_mm
+allow hal_face_default sysfs_vendor_mm:dir search;
+allow hal_face_default sysfs_vendor_mm:file { getattr write read open };
+
 # Allow hal_face_default to connect to traced_producer socket
 allow hal_face_default traced:unix_stream_socket connectto;
 
