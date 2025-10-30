@@ -16,7 +16,8 @@ DEVICE_PACKAGE_OVERLAYS += vendor/google/faceunlock/overlay
 
 # Runtime resource overlays
 PRODUCT_PACKAGES += \
-    FaceEnrollOverlay
+    FaceEnrollOverlay \
+    FaceEnrollSettingsOverlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
